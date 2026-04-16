@@ -1,0 +1,29 @@
+nc: 7
+names:
+  0: Motor Vehicle
+  1: Non_motorized Vehicle
+  2: Pedestrian
+  3: Traffic Light-Red Light
+  4: Traffic Light-Yellow Light
+  5: Traffic Light-Green Light
+  6: Traffic Light-Off
+
+vehicle_class_ids:
+  - 0
+  - 1
+
+vehicle_classes:
+  - Motor Vehicle
+  - Non_motorized Vehicle
+
+traffic_light_class_ids:
+  - 3
+  - 4
+  - 5
+  - 6
+
+traffic_light_classes:
+  - Traffic Light-Red Light
+  - Traffic Light-Yellow Light
+  - Traffic Light-Green Light
+  - Traffic Light-Off

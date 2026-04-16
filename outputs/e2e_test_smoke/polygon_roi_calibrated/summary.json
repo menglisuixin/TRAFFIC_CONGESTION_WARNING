@@ -1,0 +1,416 @@
+{
+  "source": "outputs\\e2e_test_smoke\\e2e_input.mp4",
+  "weights": "yolov5s.pt",
+  "output_video": "outputs\\e2e_test_smoke\\polygon_roi_calibrated\\traffic_pipeline.mp4",
+  "fps": 30.0,
+  "width": 1280,
+  "height": 720,
+  "img_size": 640,
+  "conf_thres": 0.25,
+  "iou_thres": 0.45,
+  "every_n": 1,
+  "frames_written": 2,
+  "homography_enabled": true,
+  "frames": [
+    {
+      "frame_index": 0,
+      "detected_this_frame": true,
+      "detections_count": 11,
+      "detections": [
+        {
+          "track_id": 1,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.890176,
+          "bbox": [
+            951.0,
+            526.0,
+            1082.0,
+            622.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 2,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.797934,
+          "bbox": [
+            834.0,
+            260.0,
+            878.0,
+            325.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 3,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.715051,
+          "bbox": [
+            457.0,
+            364.0,
+            506.0,
+            407.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 4,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.625457,
+          "bbox": [
+            754.0,
+            332.0,
+            787.0,
+            361.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 5,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.583208,
+          "bbox": [
+            542.0,
+            312.0,
+            569.0,
+            330.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 6,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.457617,
+          "bbox": [
+            705.0,
+            261.0,
+            738.0,
+            297.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 7,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.453575,
+          "bbox": [
+            571.0,
+            296.0,
+            593.0,
+            313.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 8,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.335755,
+          "bbox": [
+            679.0,
+            272.0,
+            706.0,
+            304.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 9,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.310994,
+          "bbox": [
+            0.0,
+            293.0,
+            27.0,
+            312.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 10,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.263557,
+          "bbox": [
+            620.0,
+            263.0,
+            637.0,
+            279.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 11,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.251792,
+          "bbox": [
+            681.0,
+            278.0,
+            707.0,
+            306.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        }
+      ],
+      "flow_count": 0,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.35634e-05,
+      "weighted_density": 1.35634e-05,
+      "density_per_100k": 1.356337,
+      "occupancy_ratio": 0.051503,
+      "roi_area": 368640.0,
+      "mean_speed_kmh": 0.0,
+      "max_speed_kmh": 0.0,
+      "mean_speed_mps": 0.0,
+      "max_speed_mps": 0.0,
+      "mean_speed_px_per_second": 0.0,
+      "congestion_level": "normal",
+      "congestion_status": "CONGESTED",
+      "warning_active": false
+    },
+    {
+      "frame_index": 1,
+      "detected_this_frame": true,
+      "detections_count": 11,
+      "detections": [
+        {
+          "track_id": 1,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.887484,
+          "bbox": [
+            941.0,
+            515.0,
+            1066.0,
+            607.0
+          ],
+          "speed_px_per_frame": 19.849433,
+          "speed_px_per_second": 595.482997,
+          "speed_mps": 31.98899,
+          "speed_kmh": 115.160366
+        },
+        {
+          "track_id": 2,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.794643,
+          "bbox": [
+            834.0,
+            260.0,
+            878.0,
+            325.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        },
+        {
+          "track_id": 3,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.743058,
+          "bbox": [
+            454.0,
+            368.0,
+            499.0,
+            407.0
+          ],
+          "speed_px_per_frame": 5.0,
+          "speed_px_per_second": 150.0,
+          "speed_mps": 1.884773,
+          "speed_kmh": 6.785182
+        },
+        {
+          "track_id": 5,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.620252,
+          "bbox": [
+            541.0,
+            311.0,
+            569.0,
+            330.0
+          ],
+          "speed_px_per_frame": 0.5,
+          "speed_px_per_second": 15.0,
+          "speed_mps": 0.199941,
+          "speed_kmh": 0.719787
+        },
+        {
+          "track_id": 4,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.611318,
+          "bbox": [
+            754.0,
+            331.0,
+            786.0,
+            360.0
+          ],
+          "speed_px_per_frame": 1.118034,
+          "speed_px_per_second": 33.54102,
+          "speed_mps": 3.039858,
+          "speed_kmh": 10.943488
+        },
+        {
+          "track_id": 7,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.532403,
+          "bbox": [
+            572.0,
+            296.0,
+            595.0,
+            314.0
+          ],
+          "speed_px_per_frame": 1.802776,
+          "speed_px_per_second": 54.083269,
+          "speed_mps": 3.327999,
+          "speed_kmh": 11.980798
+        },
+        {
+          "track_id": 6,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.446458,
+          "bbox": [
+            705.0,
+            261.0,
+            739.0,
+            297.0
+          ],
+          "speed_px_per_frame": 0.5,
+          "speed_px_per_second": 15.0,
+          "speed_mps": 0.205292,
+          "speed_kmh": 0.739051
+        },
+        {
+          "track_id": 11,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.369105,
+          "bbox": [
+            680.0,
+            273.0,
+            706.0,
+            303.0
+          ],
+          "speed_px_per_frame": 3.162278,
+          "speed_px_per_second": 94.86833,
+          "speed_mps": 9.954758,
+          "speed_kmh": 35.83713
+        },
+        {
+          "track_id": 8,
+          "class_id": 7,
+          "label": "truck",
+          "conf": 0.3475,
+          "bbox": [
+            680.0,
+            273.0,
+            705.0,
+            303.0
+          ],
+          "speed_px_per_frame": 1.0,
+          "speed_px_per_second": 30.0,
+          "speed_mps": 3.321532,
+          "speed_kmh": 11.957516
+        },
+        {
+          "track_id": 9,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.342459,
+          "bbox": [
+            0.0,
+            292.0,
+            28.0,
+            312.0
+          ],
+          "speed_px_per_frame": 0.5,
+          "speed_px_per_second": 15.0,
+          "speed_mps": 0.202825,
+          "speed_kmh": 0.730168
+        },
+        {
+          "track_id": 10,
+          "class_id": 2,
+          "label": "car",
+          "conf": 0.261232,
+          "bbox": [
+            620.0,
+            262.0,
+            637.0,
+            279.0
+          ],
+          "speed_px_per_frame": 0.0,
+          "speed_px_per_second": 0.0,
+          "speed_mps": 0.0,
+          "speed_kmh": 0.0
+        }
+      ],
+      "flow_count": 0,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.35634e-05,
+      "weighted_density": 1.35634e-05,
+      "density_per_100k": 1.356337,
+      "occupancy_ratio": 0.047675,
+      "roi_area": 368640.0,
+      "mean_speed_kmh": 17.713953,
+      "max_speed_kmh": 115.160366,
+      "mean_speed_mps": 4.920543,
+      "max_speed_mps": 31.98899,
+      "mean_speed_px_per_second": 91.179601,
+      "congestion_level": "normal",
+      "congestion_status": "CONGESTED",
+      "warning_active": false
+    }
+  ]
+}

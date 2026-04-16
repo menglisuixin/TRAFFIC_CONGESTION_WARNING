@@ -1,0 +1,7 @@
+{
+  "camera_id": "example_camera",
+  "roi": [[100, 100], [1180, 100], [1180, 700], [100, 700]],
+  "lanes": [],
+  "homography": null
+}
+

@@ -1,0 +1,4261 @@
+{
+  "frames": [
+    {
+      "frame_index": 0,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 1,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 2,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 3,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 4,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 5,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 6,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 7,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 8,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 9,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 10,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 11,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 12,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 13,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 14,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 15,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 16,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 17,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 18,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 19,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 20,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 21,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 22,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 23,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 24,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 25,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 26,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 27,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 28,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 29,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 30,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 31,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 32,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 33,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 34,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 35,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 36,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 37,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 38,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 39,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 40,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 41,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 42,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 43,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 44,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 45,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 46,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 47,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 48,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 49,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 50,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 51,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 52,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 53,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 54,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 55,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 56,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 57,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 58,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 59,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 60,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 61,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 62,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 63,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 64,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 65,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 66,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 67,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 68,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 69,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 70,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 71,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 72,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 73,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 74,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 75,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 76,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 77,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 78,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 79,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 80,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 81,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 82,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 83,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 84,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 85,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 86,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 87,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 88,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 89,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 90,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 91,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 92,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 93,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 94,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 95,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 96,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 97,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 98,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 99,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 100,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 101,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 102,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 103,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 104,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 105,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 106,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 107,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 108,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 109,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 110,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 111,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 112,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 113,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 114,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 115,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 116,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 117,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 118,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 119,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 120,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 121,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 122,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 123,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 124,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 125,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 126,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 127,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 128,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 129,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 130,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 131,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 132,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 133,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 134,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 135,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 136,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 137,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 138,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 139,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 140,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 141,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 142,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 143,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 144,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 145,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 146,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 147,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 148,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 149,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 150,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 151,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 152,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 153,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 154,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 155,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 156,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 157,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 158,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 159,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 160,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 161,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 162,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 163,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 164,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 165,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 166,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 167,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 168,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 169,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 170,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 171,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 172,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 173,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 174,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 175,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 176,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 177,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 178,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 179,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 180,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 181,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 182,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 183,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 184,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 185,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 186,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 187,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 188,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 189,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 190,
+      "vehicle_count": 13,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.42619e-05,
+      "weighted_density": 1.42619e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 191,
+      "vehicle_count": 14,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.5359e-05,
+      "weighted_density": 1.5359e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 192,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 193,
+      "vehicle_count": 13,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.42619e-05,
+      "weighted_density": 1.42619e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 194,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 195,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 196,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 197,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 198,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 199,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 200,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 201,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 202,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 203,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 204,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 205,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 206,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 207,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 208,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 209,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 210,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 211,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 212,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 213,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 214,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 215,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 216,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 217,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 218,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 219,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 220,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 221,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 222,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 223,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 224,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 225,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 226,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 227,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 228,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 229,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 230,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 231,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 232,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 233,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 234,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 235,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 236,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 237,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 238,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 239,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 240,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 241,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 242,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 243,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 244,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 245,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 246,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 247,
+      "vehicle_count": 11,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.20678e-05,
+      "weighted_density": 1.20678e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 248,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 249,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 250,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 251,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 252,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 253,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 254,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 255,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 256,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 257,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 258,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 259,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 260,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 261,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 262,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 263,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 264,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 265,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 266,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 267,
+      "vehicle_count": 10,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 1.09707e-05,
+      "weighted_density": 1.09707e-05,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 268,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 269,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 270,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 271,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 272,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 273,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 274,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 275,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 276,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 277,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 278,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 279,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 280,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 281,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 282,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 283,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 284,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 285,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 286,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 287,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 288,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 289,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 290,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 291,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 292,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 293,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 294,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 295,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 296,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 297,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 298,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 299,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 300,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 301,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 302,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 303,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 304,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 305,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 306,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 307,
+      "vehicle_count": 8,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 8.7765e-06,
+      "weighted_density": 8.7765e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 308,
+      "vehicle_count": 9,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 9.8736e-06,
+      "weighted_density": 9.8736e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 309,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 310,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 311,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 312,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 313,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 314,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 315,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 316,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 317,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 318,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 319,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 320,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 321,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 322,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 323,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 324,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 325,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 326,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 327,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 328,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 329,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 330,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 331,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 332,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 333,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 334,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 335,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 336,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 337,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 338,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 339,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 340,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 341,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 342,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 343,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 344,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 345,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 346,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 347,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 348,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 349,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 350,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 351,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 352,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 353,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 354,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 355,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 356,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 357,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 358,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 359,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 360,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 361,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 362,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 363,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 364,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 365,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 366,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 367,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 368,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 369,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 370,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 371,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 372,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 373,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 374,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 375,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 376,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 377,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 378,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 379,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 380,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 381,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 382,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 383,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 384,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 385,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 386,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 387,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 388,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 389,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 390,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 391,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 392,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 393,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 394,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 395,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 396,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 397,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 398,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 399,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 400,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 401,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 402,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 403,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 404,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 405,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 406,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 407,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 408,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 409,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 410,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 411,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 412,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 413,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 414,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 415,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 416,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 417,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 418,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 419,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 420,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 421,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 422,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 423,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 424,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 425,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 426,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 427,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 428,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 429,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 430,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 431,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 432,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 433,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 434,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 435,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 436,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 437,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 438,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 439,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 440,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 441,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 442,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 443,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 444,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 445,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 446,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 447,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 448,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 449,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 450,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 451,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 452,
+      "vehicle_count": 4,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 4.3883e-06,
+      "weighted_density": 4.3883e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 453,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 454,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 455,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 456,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 457,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 458,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 459,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 460,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 461,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 462,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 463,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 464,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 465,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 466,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 467,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 468,
+      "vehicle_count": 5,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 5.4853e-06,
+      "weighted_density": 5.4853e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 469,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 470,
+      "vehicle_count": 7,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 7.6795e-06,
+      "weighted_density": 7.6795e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 471,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    },
+    {
+      "frame_index": 472,
+      "vehicle_count": 6,
+      "non_motor_count": 0,
+      "pedestrian_count": 0,
+      "density": 6.5824e-06,
+      "weighted_density": 6.5824e-06,
+      "roi_area": 911520.0
+    }
+  ]
+}
