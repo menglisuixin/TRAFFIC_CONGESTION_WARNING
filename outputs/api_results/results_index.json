@@ -1,0 +1,38 @@
+{
+  "1776528378_demo_1776528378099": {
+    "status": "success",
+    "video_id": "1776528378_demo_1776528378099",
+    "video_path": "outputs\\api_results\\1776528378_demo_1776528378099\\traffic_pipeline.mp4",
+    "summary_path": "outputs\\api_results\\1776528378_demo_1776528378099\\summary.json",
+    "video_url": "/download/1776528378_demo_1776528378099/video",
+    "summary_url": "/download/1776528378_demo_1776528378099/summary",
+    "web_video_path": null,
+    "web_video_url": "/view/1776528378_demo_1776528378099/video",
+    "stream_url": "/stream/1776528378_demo_1776528378099/mjpeg",
+    "web_video_available": false
+  },
+  "1776528612_demo_1776528612924": {
+    "status": "success",
+    "video_id": "1776528612_demo_1776528612924",
+    "video_path": "outputs\\api_results\\1776528612_demo_1776528612924\\traffic_pipeline.mp4",
+    "summary_path": "outputs\\api_results\\1776528612_demo_1776528612924\\summary.json",
+    "video_url": "/download/1776528612_demo_1776528612924/video",
+    "summary_url": "/download/1776528612_demo_1776528612924/summary",
+    "web_video_path": null,
+    "web_video_url": "/view/1776528612_demo_1776528612924/video",
+    "stream_url": "/stream/1776528612_demo_1776528612924/mjpeg",
+    "web_video_available": false
+  },
+  "1776529245_demo_1776529245350": {
+    "status": "success",
+    "video_id": "1776529245_demo_1776529245350",
+    "video_path": "outputs\\api_results\\1776529245_demo_1776529245350\\traffic_pipeline.mp4",
+    "summary_path": "outputs\\api_results\\1776529245_demo_1776529245350\\summary.json",
+    "video_url": "/download/1776529245_demo_1776529245350/video",
+    "summary_url": "/download/1776529245_demo_1776529245350/summary",
+    "web_video_path": null,
+    "web_video_url": "/view/1776529245_demo_1776529245350/video",
+    "stream_url": "/stream/1776529245_demo_1776529245350/mjpeg",
+    "web_video_available": false
+  }
+}

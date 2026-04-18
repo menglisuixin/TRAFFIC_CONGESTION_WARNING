@@ -117,6 +117,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", default="cuda", help="Inference device, e.g. 0, cuda, or cpu")
     parser.add_argument("--every-n", type=int, default=1, help="Run detection every N frames")
     parser.add_argument("--iou-thres", type=float, default=0.45, help="YOLOv5 NMS IoU threshold")
+    parser.add_argument("--classes", default="2,7", help="COCO class ids to detect. Default: 2,7 for car,truck")
     parser.add_argument("--show", action="store_true", help="Show realtime preview window")
     parser.add_argument(
         "--roi",
@@ -161,6 +162,7 @@ def main() -> None:
         img_size=args.img_size,
         conf_thres=args.conf_thres,
         iou_thres=args.iou_thres,
+        classes=parse_class_ids(args.classes),
     )
     tracker = SimpleIoUTracker(iou_threshold=0.3, max_missing=max(5, args.every_n * 3))
     roi_shape = build_roi(args.roi, width, height)
@@ -267,6 +269,16 @@ def main() -> None:
     print(f"size: {width}x{height}")
     print(f"fps: {args.fps}")
 
+
+
+
+def parse_class_ids(value: Optional[str]) -> Optional[List[int]]:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text or text.lower() in {"none", "null", "all"}:
+        return None
+    return [int(item.strip()) for item in text.split(",") if item.strip()]
 
 def parse_source(source: str):
     return int(source) if source.isdigit() else source
@@ -500,9 +512,7 @@ def draw_status_panel(
 
     lines = [
         f"Vehicles 总目标数量: {total_count:d}",
-        f"Motor 机动车数量: {motor_count:d}",
-        f"NonMotor 非机动车数量: {non_motor_count:d}",
-        f"Ped 行人数: {pedestrian_count:d}",
+        f"ROI车辆(car/truck): {motor_count:d}",
         f"Flow Count 检测线通过车辆数: {flow_total:d}",
         f"Density 道路密度(车辆数/ROI面积): {density:.4f}",
         f"Weighted Density 类别加权密度: {weighted_density:.4f}",
@@ -696,6 +706,11 @@ def color_for_class(class_id: int) -> Tuple[int, int, int]:
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
 
 
 

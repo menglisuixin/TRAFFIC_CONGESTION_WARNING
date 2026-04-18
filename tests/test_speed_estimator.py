@@ -62,3 +62,30 @@ def test_speed_estimator_fallback_iou_assigns_stable_ids() -> None:
     assert stats[0].vehicles[0].track_id == stats[1].vehicles[0].track_id
     assert stats[1].vehicles[0].speed_px_per_frame == 2.0
     assert stats[1].vehicles[0].speed_px_per_second == 10.0
+
+
+def test_speed_estimator_uses_frame_index_delta_for_skipped_frames() -> None:
+    frames = [
+        {"frame_index": 0, "detections": [{"track_id": 3, "class_id": 0, "label": "Motor Vehicle", "bbox": [0, 0, 10, 10]}]},
+        {"frame_index": 5, "detections": [{"track_id": 3, "class_id": 0, "label": "Motor Vehicle", "bbox": [10, 0, 20, 10]}]},
+    ]
+
+    stats = estimate_speeds_from_frames(frames, fps=10.0)
+    speed = stats[1].vehicles[0]
+
+    assert math.isclose(speed.speed_px_per_frame, 2.0, rel_tol=1e-6)
+    assert math.isclose(speed.speed_px_per_second, 20.0, rel_tol=1e-6)
+
+
+def test_speed_estimator_suppresses_static_bbox_jitter() -> None:
+    frames = [
+        {"frame_index": 0, "detections": [{"track_id": 9, "class_id": 0, "label": "Motor Vehicle", "bbox": [0, 0, 10, 10]}]},
+        {"frame_index": 1, "detections": [{"track_id": 9, "class_id": 0, "label": "Motor Vehicle", "bbox": [0.5, 0, 10.5, 10]}]},
+        {"frame_index": 2, "detections": [{"track_id": 9, "class_id": 0, "label": "Motor Vehicle", "bbox": [-0.3, 0, 9.7, 10]}]},
+    ]
+
+    stats = estimate_speeds_from_frames(frames, fps=10.0, min_motion_px_per_frame=2.0)
+
+    assert all(frame.vehicles[0].speed_px_per_frame == 0.0 for frame in stats)
+    assert all(frame.vehicles[0].speed_px_per_second == 0.0 for frame in stats)
+

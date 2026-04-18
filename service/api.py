@@ -11,10 +11,12 @@ import json
 import shutil
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from fastapi import APIRouter, FastAPI, File, Form, HTTPException, Query, UploadFile
-from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -23,15 +25,17 @@ if str(PROJECT_ROOT) not in sys.path:
 from calibration.homography import compute_homography, load_point_pairs
 from core.pipeline import TrafficPipeline
 from core.types import Point
+from core.video_io import transcode_to_h264_web
 from service.schemas import AnalyzeResponse, HealthResponse, ResultResponse
 
 router = APIRouter()
 
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "outputs" / "api_results"
 DEFAULT_UPLOAD_DIR = PROJECT_ROOT / "outputs" / "api_uploads"
+DEFAULT_CONFIG_PATH = PROJECT_ROOT / "configs" / "system.yaml"
+WEB_DIR = PROJECT_ROOT / "web"
+SAMPLE_ASSETS_DIR = PROJECT_ROOT / "yolov5" / "data" / "images"
 RESULTS: Dict[str, Dict[str, str]] = {}
-
-
 
 
 @router.get("/health", response_model=HealthResponse)
@@ -70,6 +74,22 @@ def analyze_video(
     )
     return AnalyzeResponse(**result)
 
+@router.post("/preview_frame")
+def preview_frame(file: UploadFile = File(...)) -> FileResponse:
+    """Extract the first readable frame from an uploaded video for ROI calibration."""
+
+    upload_path = save_upload(file, DEFAULT_UPLOAD_DIR / "previews")
+    preview_path = upload_path.with_suffix(".jpg")
+    try:
+        width, height = extract_preview_frame(upload_path, preview_path)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    headers = {
+        "X-Frame-Width": str(width),
+        "X-Frame-Height": str(height),
+        "Cache-Control": "no-store",
+    }
+    return FileResponse(preview_path, media_type="image/jpeg", headers=headers)
 
 @router.get("/get_results", response_model=ResultResponse)
 def get_results(
@@ -83,7 +103,7 @@ def get_results(
     if result is None:
         raise HTTPException(status_code=404, detail="result not found")
 
-    payload = dict(result)
+    payload = ensure_result_urls(dict(result))
     if include_summary:
         summary_path = Path(payload["summary_path"])
         if summary_path.exists():
@@ -93,7 +113,7 @@ def get_results(
 
 @router.get("/download/{video_id}/{kind}")
 def download_result(video_id: str, kind: str) -> FileResponse:
-    """Download result video or summary. kind must be 'video' or 'summary'."""
+    """Download result video, web video, or summary."""
 
     result = find_result(video_id=video_id, filename=None)
     if result is None:
@@ -101,19 +121,109 @@ def download_result(video_id: str, kind: str) -> FileResponse:
     if kind == "video":
         path = Path(result["video_path"])
         media_type = "video/mp4"
+    elif kind == "web_video":
+        path = Path(result.get("web_video_path") or result["video_path"])
+        media_type = "video/mp4"
     elif kind == "summary":
         path = Path(result["summary_path"])
         media_type = "application/json"
     else:
-        raise HTTPException(status_code=400, detail="kind must be 'video' or 'summary'")
+        raise HTTPException(status_code=400, detail="kind must be 'video', 'web_video', or 'summary'")
     if not path.exists():
         raise HTTPException(status_code=404, detail=f"{kind} file not found")
     return FileResponse(path, media_type=media_type, filename=path.name)
 
 
+@router.get("/view/{video_id}/video")
+def view_video(video_id: str) -> FileResponse:
+    """Stream browser-preferred MP4 inline for the web frontend."""
+
+    result = find_result(video_id=video_id, filename=None)
+    if result is None:
+        raise HTTPException(status_code=404, detail="result not found")
+    path = Path(result.get("web_video_path") or result["video_path"])
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="video file not found")
+    return FileResponse(path, media_type="video/mp4", filename=path.name, content_disposition_type="inline")
+
+
+@router.get("/stream/{video_id}/mjpeg")
+def stream_mjpeg(video_id: str) -> StreamingResponse:
+    """Fallback browser preview as multipart MJPEG when MP4 codec is unsupported."""
+
+    result = find_result(video_id=video_id, filename=None)
+    if result is None:
+        raise HTTPException(status_code=404, detail="result not found")
+    path = Path(result.get("web_video_path") or result["video_path"])
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="video file not found")
+    return StreamingResponse(mjpeg_frame_generator(path), media_type="multipart/x-mixed-replace; boundary=frame")
+
+
+def mjpeg_frame_generator(path: Path):
+    import cv2
+
+    capture = cv2.VideoCapture(str(path))
+    fps = capture.get(cv2.CAP_PROP_FPS) or 24.0
+    delay = 1.0 / max(1.0, min(float(fps), 60.0))
+    try:
+        while capture.isOpened():
+            ok, frame = capture.read()
+            if not ok or frame is None:
+                break
+            ok, encoded = cv2.imencode(".jpg", frame, [int(cv2.IMWRITE_JPEG_QUALITY), 82])
+            if not ok:
+                continue
+            yield b"--frame\r\nContent-Type: image/jpeg\r\n\r\n" + encoded.tobytes() + b"\r\n"
+            time.sleep(delay)
+    finally:
+        capture.release()
+
+def extract_preview_frame(video_path: Path, image_path: Path) -> tuple:
+    """Save the first decodable frame as a JPEG image and return width, height."""
+
+    import cv2
+
+    capture = cv2.VideoCapture(str(video_path))
+    if not capture.isOpened():
+        capture.release()
+        raise ValueError("无法打开视频文件，不能读取第一帧")
+
+    frame = None
+    try:
+        for _ in range(30):
+            ok, current = capture.read()
+            if ok and current is not None and current.size > 0:
+                frame = current
+                break
+    finally:
+        capture.release()
+
+    if frame is None:
+        raise ValueError("无法从视频中解码出有效帧")
+
+    image_path.parent.mkdir(parents=True, exist_ok=True)
+    ok = cv2.imwrite(str(image_path), frame)
+    if not ok:
+        raise ValueError("第一帧图片保存失败")
+
+    height, width = frame.shape[:2]
+    return int(width), int(height)
+
 def create_app() -> FastAPI:
     app = FastAPI(title="Traffic Congestion Warning")
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     app.include_router(router)
+    if SAMPLE_ASSETS_DIR.exists():
+        app.mount("/sample-assets", StaticFiles(directory=str(SAMPLE_ASSETS_DIR)), name="sample-assets")
+    if WEB_DIR.exists():
+        app.mount("/", StaticFiles(directory=str(WEB_DIR), html=True), name="web")
     return app
 
 
@@ -135,7 +245,7 @@ def run_analysis(
 ) -> Dict[str, str]:
     video_id = video_id or build_video_id(Path(source).name)
     result_dir = Path(output_dir) / video_id
-    roi_points = parse_roi(roi)
+    roi_points, roi_regions, roi_mode = parse_roi_config(roi)
     homography = parse_calibration(calibration)
 
     pipeline = TrafficPipeline(
@@ -148,10 +258,14 @@ def run_analysis(
         fps=fps,
         every_n=every_n,
         roi_points=roi_points,
+        roi_regions=roi_regions,
+        roi_mode=roi_mode,
         homography=homography,
+        config_path=str(DEFAULT_CONFIG_PATH),
     )
     summary_path = pipeline.run()
     video_path = result_dir / "traffic_pipeline.mp4"
+    web_video_path = transcode_to_h264_web(video_path, result_dir / "traffic_pipeline_web.mp4")
 
     result = {
         "status": "success",
@@ -160,12 +274,25 @@ def run_analysis(
         "summary_path": str(summary_path),
         "video_url": f"/download/{video_id}/video",
         "summary_url": f"/download/{video_id}/summary",
+        "web_video_path": str(web_video_path) if web_video_path is not None else None,
+        "web_video_url": f"/view/{video_id}/video",
+        "stream_url": f"/stream/{video_id}/mjpeg",
+        "web_video_available": web_video_path is not None,
     }
+    result = ensure_result_urls(result)
     RESULTS[video_id] = result
     write_result_index(Path(output_dir), result)
     return result
 
 
+def ensure_result_urls(result: Dict[str, str]) -> Dict[str, str]:
+    video_id = result.get("video_id", "")
+    if video_id:
+        result.setdefault("web_video_url", f"/view/{video_id}/video")
+        result.setdefault("stream_url", f"/stream/{video_id}/mjpeg")
+    result.setdefault("web_video_path", None)
+    result.setdefault("web_video_available", bool(result.get("web_video_path")))
+    return result
 def save_upload(file: UploadFile, upload_dir: Path) -> Path:
     upload_dir.mkdir(parents=True, exist_ok=True)
     filename = sanitize_filename(file.filename or "upload.mp4")
@@ -190,27 +317,59 @@ def sanitize_filename(filename: str) -> str:
     return "".join(safe).strip("._") or "video"
 
 
-def parse_roi(value: Optional[str]) -> Optional[List[Point]]:
+def parse_roi_config(value: Optional[str]) -> Tuple[Optional[List[Point]], Optional[List[Dict[str, object]]], str]:
     if not value:
-        return None
+        return None, None, "default"
     raw = load_json_or_file(value)
+
+    if isinstance(raw, dict) and "regions" in raw:
+        mode = str(raw.get("mode") or "directional_roi")
+        regions = parse_regions(raw["regions"])
+        return None, regions, mode
+
+    if isinstance(raw, dict) and "rois" in raw:
+        mode = str(raw.get("mode") or "directional_roi")
+        regions = parse_regions(raw["rois"])
+        return None, regions, mode
+
+    points = parse_roi_points(raw)
+    return points, None, "single_roi"
+
+
+def parse_regions(raw_regions: object) -> List[Dict[str, object]]:
+    if not isinstance(raw_regions, list) or not raw_regions:
+        raise ValueError("roi regions must be a non-empty list")
+    regions: List[Dict[str, object]] = []
+    for index, raw_region in enumerate(raw_regions):
+        if not isinstance(raw_region, dict):
+            raise ValueError("each roi region must be an object")
+        name = str(raw_region.get("name") or f"ROI_{index + 1}")
+        points = parse_roi_points(raw_region)
+        regions.append({"name": name, "points": points})
+    return regions
+
+
+def parse_roi_points(raw: object) -> List[Point]:
     if isinstance(raw, dict) and "polygon" in raw:
         points = raw["polygon"]
+    elif isinstance(raw, dict) and "points" in raw:
+        points = raw["points"]
     elif isinstance(raw, dict) and "rect" in raw:
         x1, y1, x2, y2 = [float(item) for item in raw["rect"]]
         points = [[x1, y1], [x2, y1], [x2, y2], [x1, y2]]
     elif isinstance(raw, list):
         points = raw
     else:
-        raise ValueError("roi must be a point list, {'polygon': [...]}, or {'rect': [x1,y1,x2,y2]}")
+        raise ValueError("roi must be a point list, {'polygon': [...]}, {'rect': [...]}, or {'mode','regions'}")
 
-    parsed = []
+    parsed: List[Point] = []
     for point in points:
         if not isinstance(point, (list, tuple)) or len(point) != 2:
             raise ValueError("roi points must be [x, y]")
         parsed.append(Point(float(point[0]), float(point[1])))
+    if len(parsed) < 3:
+        raise ValueError("roi polygon requires at least three points")
     return parsed
-
 
 def parse_calibration(value: Optional[str]):
     if not value:
@@ -321,4 +480,8 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
 

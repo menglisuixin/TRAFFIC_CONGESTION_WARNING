@@ -47,7 +47,10 @@ class TrafficPipeline:
         every_n: Optional[int] = None,
         show: Optional[bool] = None,
         roi_points: Optional[Sequence[Point]] = None,
+        roi_regions: Optional[Sequence[Mapping[str, object]]] = None,
+        roi_mode: str = "single_roi",
         homography: Optional[Homography] = None,
+        meters_per_pixel: Optional[float] = None,
         config_path: Optional[str] = None,
     ) -> None:
         self.config_path = config_path
@@ -64,8 +67,14 @@ class TrafficPipeline:
         self.every_n = int(first_not_none(every_n, config_get(self.config, "analytics", "every_n"), 1))
         self.show = bool(first_not_none(show, config_get(self.config, "video", "show"), False))
         self.roi_points = list(roi_points) if roi_points else None
+        self.roi_regions = list(roi_regions) if roi_regions else None
+        self.roi_mode = roi_mode
         self.homography = homography
-
+        self.analytics_config = config_section(self.config, "analytics")
+        configured_mpp = self.analytics_config.get("speed_meters_per_pixel")
+        self.meters_per_pixel = first_not_none(meters_per_pixel, configured_mpp)
+        if self.meters_per_pixel is not None:
+            self.meters_per_pixel = float(self.meters_per_pixel)
         if not self.source or self.source == "None":
             raise ValueError("source is required; pass --source or set video.source in configs/system.yaml")
         if not self.weights or self.weights == "None":
@@ -90,9 +99,11 @@ class TrafficPipeline:
 
         height, width = first_frame.shape[:2]
         writer = VideoWriter(output_video, self.fps, width, height)
-        roi_points = self.roi_points or self._resolve_config_roi(width, height)
+        roi_points = None if self.roi_regions else (self.roi_points or self._resolve_config_roi(width, height))
+        roi_regions = self.roi_regions
 
         tracker_cfg = config_section(self.config, "tracker")
+        analytics_cfg = self.analytics_config
         detector = YOLOv5Detector(
             weights=self.weights,
             device=self.device,
@@ -109,9 +120,18 @@ class TrafficPipeline:
             detector=detector,
             tracker=tracker,
             roi_points=roi_points,
+            roi_regions=roi_regions,
             fps=self.fps,
             every_n=self.every_n,
             homography=self.homography,
+            meters_per_pixel=self.meters_per_pixel,
+            speed_smoothing_alpha=float(analytics_cfg.get("speed_smoothing_alpha", 0.35)),
+            max_speed_kmh=float(analytics_cfg.get("max_speed_kmh", 160.0)),
+            min_motion_px_per_frame=float(analytics_cfg.get("speed_min_motion_px_per_frame", analytics_cfg.get("low_speed_pixel_threshold", 2.0))),
+            speed_warmup_frames=int(analytics_cfg.get("speed_warmup_frames", 3)),
+            speed_history_size=int(analytics_cfg.get("speed_history_size", 5)),
+            speed_max_drop_ratio=float(analytics_cfg.get("speed_max_drop_ratio", 0.45)),
+            speed_hold_frames=int(analytics_cfg.get("speed_hold_frames", 8)),
         )
 
         frame_index = 0
@@ -150,8 +170,15 @@ class TrafficPipeline:
             "every_n": self.every_n,
             "frames_written": len(result_writer.frames),
             "homography_enabled": self.homography is not None,
+            "speed_meters_per_pixel": self.meters_per_pixel,
+            "speed_warmup_frames": int(analytics_cfg.get("speed_warmup_frames", 3)),
+            "speed_history_size": int(analytics_cfg.get("speed_history_size", 5)),
+            "speed_max_drop_ratio": float(analytics_cfg.get("speed_max_drop_ratio", 0.45)),
+            "speed_hold_frames": int(analytics_cfg.get("speed_hold_frames", 8)),
             "config_path": self.config_path,
+            "roi_mode": self.roi_mode,
             "roi_points": [[point.x, point.y] for point in roi_points] if roi_points else None,
+            "roi_regions": serialize_roi_regions(roi_regions),
         }
         summary_json = result_writer.write_summary(metadata)
 
@@ -178,6 +205,19 @@ class TrafficPipeline:
             y = float(point[1]) * height if normalized else float(point[1])
             parsed.append(Point(x, y))
         return parsed
+
+
+def serialize_roi_regions(roi_regions: Optional[Sequence[Mapping[str, object]]]) -> Optional[List[Dict[str, object]]]:
+    if not roi_regions:
+        return None
+    serialized: List[Dict[str, object]] = []
+    for region in roi_regions:
+        points = region.get("points") or region.get("polygon") or []
+        serialized.append({
+            "name": str(region.get("name", "ROI")),
+            "points": [[float(point.x), float(point.y)] for point in points if isinstance(point, Point)],
+        })
+    return serialized
 
 
 def load_system_config(config_path: Optional[str]) -> Dict[str, Any]:
@@ -267,3 +307,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

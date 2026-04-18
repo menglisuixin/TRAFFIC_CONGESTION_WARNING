@@ -9,3 +9,8 @@ pandas
 matplotlib
 tqdm
 pytest
+fastapi
+uvicorn
+python-multipart
+pydantic
+Pillow

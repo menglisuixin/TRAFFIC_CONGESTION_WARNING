@@ -7,6 +7,8 @@ if SCRIPT_DIR.endswith("core"):
     sys.path.pop(0)
 
 import argparse
+import shutil
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterator, Optional, Tuple, Union
@@ -165,6 +167,50 @@ def process_video(
     return count
 
 
+def ffmpeg_available() -> bool:
+    """Return True when ffmpeg is available on PATH."""
+
+    return shutil.which("ffmpeg") is not None
+
+
+def transcode_to_h264_web(input_file: Union[str, Path], output_file: Union[str, Path], overwrite: bool = True) -> Optional[Path]:
+    """Transcode an MP4 to browser-friendly H.264/yuv420p using ffmpeg."""
+
+    source = Path(input_file)
+    target = Path(output_file)
+    if not source.exists() or source.stat().st_size <= 0:
+        return None
+    if not ffmpeg_available():
+        return None
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists() and not overwrite:
+        return target
+
+    command = [
+        "ffmpeg",
+        "-y" if overwrite else "-n",
+        "-i",
+        str(source),
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "23",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-an",
+        str(target),
+    ]
+    try:
+        completed = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False)
+    except OSError:
+        return None
+    if completed.returncode != 0 or not target.exists() or target.stat().st_size <= 0:
+        return None
+    return target
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Copy or process a video into a Windows-playable MP4.")
     parser.add_argument("--source", required=True, help="Input video path or camera index")
@@ -182,4 +228,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
 

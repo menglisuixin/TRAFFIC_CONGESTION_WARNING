@@ -13,7 +13,10 @@ model:
   img_size: 640
   conf_thres: 0.25
   iou_thres: 0.45
-  classes: null
+  # Official YOLOv5 COCO ids: car=2, truck=7. Only these classes are detected.
+  classes:
+    - 2
+    - 7
 
 tracker:
   type: deepsort
@@ -43,6 +46,21 @@ analytics:
   trajectory_max_length: 30
   use_bottom_center: true
   low_speed_pixel_threshold: 2.0
+  # Approximate fallback used only when homography calibration is not provided.
+  # For accurate real-world speed, provide calibration/homography instead.
+  speed_meters_per_pixel: 0.05
+  speed_smoothing_alpha: 0.35
+  # Motions below this pixel/frame threshold are treated as bbox jitter, not real speed.
+  speed_min_motion_px_per_frame: 2.0
+  # Do not include the first few valid samples of a new track in displayed/average speed.
+  speed_warmup_frames: 3
+  # Use the median of recent valid samples to reduce one-frame detection jitter.
+  speed_history_size: 5
+  # Suppress sudden one-frame drops below this ratio of the previous stable speed.
+  speed_max_drop_ratio: 0.45
+  # Keep the previous stable speed for a few jitter-suppressed frames.
+  speed_hold_frames: 8
+  max_speed_kmh: 160.0
   congestion_rules:
     slow:
       min_roi_vehicle_count: 5
@@ -67,3 +85,5 @@ paths:
   alarms: outputs/alarms
   metrics: outputs/metrics
   snapshots: outputs/snapshots
+
+

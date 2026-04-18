@@ -122,6 +122,7 @@ def estimate_speeds_from_frames(
     fps: float,
     iou_threshold: float = 0.3,
     homography: Optional[Homography] = None,
+    min_motion_px_per_frame: float = 2.0,
 ) -> List[SpeedFrameStats]:
     """Estimate speed for each tracked object in every frame.
 
@@ -132,9 +133,11 @@ def estimate_speeds_from_frames(
     fps = safe_float(fps, 30.0)
     if fps <= 0.0:
         fps = 30.0
+    min_motion_px_per_frame = max(0.0, safe_float(min_motion_px_per_frame, 2.0))
 
     assigner = IoUTrackAssigner(iou_threshold=iou_threshold)
     previous_pixel_points: Dict[int, Point] = {}
+    previous_frame_indices: Dict[int, int] = {}
     previous_world_points: Dict[int, Point] = {}
     frame_stats: List[SpeedFrameStats] = []
 
@@ -153,24 +156,39 @@ def estimate_speeds_from_frames(
             if track_id is None:
                 continue
 
+            frame_index = safe_int(frame.get("frame_index"))
             current_pixel = bbox_bottom_center(bbox)
             previous_pixel = previous_pixel_points.get(track_id)
-            speed_px_per_frame = 0.0 if previous_pixel is None else distance(previous_pixel, current_pixel)
-            previous_pixel_points[track_id] = current_pixel
+            previous_frame_index = previous_frame_indices.get(track_id)
+            delta_frames = max(1, frame_index - previous_frame_index) if previous_frame_index is not None else 1
+            delta_time = delta_frames / fps
+            raw_distance_px = 0.0 if previous_pixel is None else distance(previous_pixel, current_pixel)
+            raw_speed_px_per_frame = raw_distance_px / delta_frames
+            motion_suppressed = previous_pixel is None or raw_speed_px_per_frame < min_motion_px_per_frame
 
+            speed_px_per_frame = 0.0
             speed_mps = 0.0
             speed_kmh = 0.0
-            if homography is not None:
-                current_world = homography.pixel_to_world(current_pixel[0], current_pixel[1])
-                previous_world = previous_world_points.get(track_id)
-                if previous_world is not None:
-                    speed_mps = distance(previous_world, current_world) * fps
-                    speed_kmh = speed_mps * 3.6
-                previous_world_points[track_id] = current_world
+            if previous_pixel is None:
+                previous_pixel_points[track_id] = current_pixel
+                previous_frame_indices[track_id] = frame_index
+                if homography is not None:
+                    previous_world_points[track_id] = homography.pixel_to_world(current_pixel[0], current_pixel[1])
+            elif not motion_suppressed:
+                speed_px_per_frame = raw_speed_px_per_frame
+                if homography is not None:
+                    current_world = homography.pixel_to_world(current_pixel[0], current_pixel[1])
+                    previous_world = previous_world_points.get(track_id)
+                    if previous_world is not None and delta_time > 0.0:
+                        speed_mps = distance(previous_world, current_world) / delta_time
+                        speed_kmh = speed_mps * 3.6
+                    previous_world_points[track_id] = current_world
+                previous_pixel_points[track_id] = current_pixel
+                previous_frame_indices[track_id] = frame_index
 
             records.append(
                 SpeedRecord(
-                    frame_index=safe_int(frame.get("frame_index")),
+                    frame_index=frame_index,
                     track_id=track_id,
                     class_id=safe_int(detection.get("class_id"), -1),
                     label=str(detection.get("label", "")),
@@ -186,6 +204,7 @@ def estimate_speeds_from_frames(
         for track_id in list(previous_pixel_points):
             if track_id not in active_ids and detections:
                 previous_pixel_points.pop(track_id, None)
+                previous_frame_indices.pop(track_id, None)
                 previous_world_points.pop(track_id, None)
 
         mean_px_speed = sum(record.speed_px_per_second for record in records) / len(records) if records else 0.0
@@ -343,6 +362,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--format", choices=("json", "csv"), default="json", help="Output format")
     parser.add_argument("--fps", type=float, default=None, help="Video FPS. Defaults to summary fps or 30")
     parser.add_argument("--iou-threshold", type=float, default=0.3, help="IoU threshold for fallback tracking")
+    parser.add_argument("--min-motion-px-per-frame", type=float, default=2.0, help="Suppress bbox jitter below this pixel/frame speed")
     parser.add_argument("--calibration", default=None, help="JSON file with pixel_points and world_points")
     parser.add_argument("--pixel-points", default=None, help='JSON pixel points, e.g. "[[100,500],[500,500],[500,700],[100,700]]"')
     parser.add_argument("--world-points", default=None, help='JSON world meter points, e.g. "[[0,0],[10,0],[10,20],[0,20]]"')
@@ -361,6 +381,7 @@ def main() -> None:
         fps=fps,
         iou_threshold=args.iou_threshold,
         homography=homography,
+        min_motion_px_per_frame=args.min_motion_px_per_frame,
     )
     output = Path(args.output)
     if args.format == "json":
@@ -375,3 +396,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

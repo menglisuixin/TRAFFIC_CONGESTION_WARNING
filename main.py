@@ -1,4 +1,4 @@
-"""Command-line entry point for the traffic congestion warning MVP."""
+﻿"""Command-line entry point for the traffic congestion warning MVP."""
 
 import argparse
 from pathlib import Path
@@ -29,6 +29,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--img-size", type=int, default=640, help="YOLOv5 inference image size")
     parser.add_argument("--output", default="", help="Optional output video path")
     parser.add_argument("--show", action="store_true", help="Show live visualization window")
+    parser.add_argument("--classes", default="2,7", help="COCO class ids to detect. Default: 2,7 for car,truck")
     return parser.parse_args()
 
 
@@ -55,6 +56,7 @@ def main() -> None:
         img_size=args.img_size,
         conf_thres=args.conf_thres,
         iou_thres=args.iou_thres,
+        classes=parse_class_ids(args.classes),
     )
     tracker = DeepSORTTracker()
     trajectories = TrajectoryStore(max_length=30, use_bottom_center=True)
@@ -124,6 +126,14 @@ def main() -> None:
         if args.show:
             cv2.destroyAllWindows()
 
+
+
+
+def parse_class_ids(value: str):
+    text = str(value).strip()
+    if not text or text.lower() in {"none", "null", "all"}:
+        return None
+    return [int(item.strip()) for item in text.split(",") if item.strip()]
 
 def _parse_source(source: str) -> SourceType:
     return int(source) if source.isdigit() else source
@@ -197,3 +207,5 @@ def _build_stats(
 
 if __name__ == "__main__":
     main()
+
+

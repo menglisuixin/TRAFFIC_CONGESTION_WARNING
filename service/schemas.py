@@ -28,6 +28,10 @@ class AnalyzeResponse(BaseModel):
     summary_path: str
     video_url: str
     summary_url: str
+    web_video_path: Optional[str] = None
+    web_video_url: Optional[str] = None
+    stream_url: Optional[str] = None
+    web_video_available: bool = False
 
 
 class ResultResponse(BaseModel):
@@ -37,6 +41,10 @@ class ResultResponse(BaseModel):
     summary_path: str
     video_url: str
     summary_url: str
+    web_video_path: Optional[str] = None
+    web_video_url: Optional[str] = None
+    stream_url: Optional[str] = None
+    web_video_available: bool = False
     summary: Optional[Dict[str, Any]] = None
 
 
