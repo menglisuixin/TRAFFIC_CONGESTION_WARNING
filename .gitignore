@@ -1,0 +1,105 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments and local env files
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and runtime files
+*.log
+logs/
+outputs/logs/
+outputs/alarms/
+outputs/metrics/
+outputs/snapshots/
+
+# Generated outputs
+outputs/**
+!outputs/.gitkeep
+!outputs/**/.gitkeep
+
+# Uploaded media and local datasets
+# Keep directory placeholders and dataset config, ignore heavy/private data.
+data/images/**
+data/videos/**
+data/labels/**
+data/annotations/**
+!data/images/.gitkeep
+!data/videos/.gitkeep
+!data/labels/.gitkeep
+!data/annotations/.gitkeep
+!data/dataset.yaml
+
+# Model weights and exported models
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.pb
+*.mlmodel
+*.torchscript
+weights/**
+!weights/.gitkeep
+
+# YOLOv5 generated runs and caches
+yolov5/runs/
+yolov5/__pycache__/
+yolov5/**/*.py[cod]
+yolov5/.pytest_cache/
+
+# Training artifacts
+runs/
+wandb/
+mlruns/
+*.cache
+*.npy
+*.npz
+
+# Generated videos/images from demos or diagnostics
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.bmp
+!docs/**/*.png
+!docs/**/*.jpg
+!web/**/*.png
+!web/**/*.jpg
+!web/**/*.jpeg
+!web/**/*.svg
+
+# Keep project source/config/docs
+!README.md
+!requirements.txt
+!configs/*.yaml
+!configs/*.json
+!scripts/*.py
+!scripts/*.sh
+!web/**
