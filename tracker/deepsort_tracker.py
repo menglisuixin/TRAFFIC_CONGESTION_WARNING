@@ -102,15 +102,16 @@ class DeepSORTTracker(BaseTracker):
             )
 
         raw_tracks = self._real_tracker.update_tracks(ds_detections, frame=frame)
+        frame_height, frame_width = frame.shape[:2]
         tracks: List[Track] = []
         for raw_track in raw_tracks:
             if hasattr(raw_track, "is_confirmed") and not raw_track.is_confirmed():
                 continue
-            if hasattr(raw_track, "to_ltrb"):
-                left, top, right, bottom = raw_track.to_ltrb()
-            else:
+            if not self.return_missing and int(getattr(raw_track, "time_since_update", 0)) > 0:
                 continue
-            bbox = BBox(float(left), float(top), float(right), float(bottom))
+            bbox = raw_track_to_bbox(raw_track, frame_width=frame_width, frame_height=frame_height, allow_prediction=self.return_missing)
+            if bbox is None:
+                continue
             cls_id, label, score = best_detection_metadata(bbox, detections)
             tracks.append(
                 Track(
@@ -127,6 +128,28 @@ class DeepSORTTracker(BaseTracker):
 
 # Backward-compatible alias for common capitalization.
 DeepSortTracker = DeepSORTTracker
+
+
+def raw_track_to_bbox(raw_track, frame_width: int, frame_height: int, allow_prediction: bool = False) -> Optional[BBox]:
+    if not hasattr(raw_track, "to_ltrb"):
+        return None
+    try:
+        ltrb = raw_track.to_ltrb(orig=True, orig_strict=True)
+    except TypeError:
+        ltrb = None
+    if ltrb is None and allow_prediction:
+        ltrb = raw_track.to_ltrb()
+    if ltrb is None:
+        return None
+
+    left, top, right, bottom = [float(value) for value in ltrb]
+    left = max(0.0, min(left, float(frame_width - 1)))
+    right = max(0.0, min(right, float(frame_width - 1)))
+    top = max(0.0, min(top, float(frame_height - 1)))
+    bottom = max(0.0, min(bottom, float(frame_height - 1)))
+    if right <= left or bottom <= top:
+        return None
+    return BBox(left, top, right, bottom)
 
 
 def best_detection_metadata(bbox: BBox, detections: List[Detection]) -> Tuple[int, str, float]:

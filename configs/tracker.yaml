@@ -1,6 +1,11 @@
+# Optional standalone tracker configuration reference.
+# The main pipeline reads configs/system.yaml -> tracker by default.
 tracker:
-  type: bytetrack
-  max_age: 30
-  min_hits: 3
+  type: deepsort
+  use_real_deepsort: true
   iou_threshold: 0.3
-
+  max_missing: 30
+  return_missing: false
+  high_conf_threshold: 0.5
+  low_conf_threshold: 0.1
+  low_iou_threshold: 0.2

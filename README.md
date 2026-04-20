@@ -5,7 +5,7 @@
 ## 功能概览
 
 - 车辆检测：默认使用官方 YOLOv5 COCO 权重 `yolov5s.pt`，当前配置只识别 `car` 和 `truck`。
-- 目标跟踪：提供 DeepSORT 兼容接口，不可用时自动降级为 IoU Tracker，也提供 ByteTrack 风格接口。
+- 目标跟踪：可通过配置选择 `deepsort`、`bytetrack` 或 `iou`；`deepsort` 会在安装 `deep-sort-realtime` 时使用真实 DeepSORT，否则自动降级为 IoU fallback。
 - ROI 分析：支持单向道路 1 个 ROI，也支持双向道路分别绘制 `A_to_B` 和 `B_to_A` 两个 ROI。
 - 速度估计：支持基于 Homography 标定的真实速度换算，也支持 `meters_per_pixel` 近似换算。
 - 速度稳定：包含预热帧过滤、中位数平滑、异常低速抑制、抖动帧保持上一稳定速度。
@@ -28,7 +28,7 @@ traffic_congestion_warning/
 ├── scripts/            # 诊断、实时分析等脚本
 ├── service/            # FastAPI 服务和 Pydantic schema
 ├── tests/              # pytest 测试
-├── tracker/            # DeepSORT / ByteTrack / IoU fallback 跟踪器
+├── tracker/            # DeepSORT adapter / ByteTrack-style / IoU fallback 跟踪器
 ├── visualization/      # 绘制框、ROI、统计面板、图表
 ├── web/                # 本地 Web 前端原型
 ├── weights/            # 本地权重目录

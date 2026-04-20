@@ -12,9 +12,9 @@
 ### 1.2 跟踪模块
 
 - 提供 `BaseTracker` 抽象接口。
-- 提供 DeepSORT 兼容实现。
+- 提供 DeepSORT adapter，安装 `deep-sort-realtime` 后可使用真实 DeepSORT。
 - DeepSORT 依赖不可用时自动使用 IoU Tracker fallback。
-- 提供 ByteTrack 风格接口。
+- 提供 ByteTrack-style 跟踪器，并支持通过 `configs/system.yaml` 选择。
 - 输出统一 `Track` 数据结构。
 
 ### 1.3 分析模块
@@ -74,7 +74,7 @@
 ### 3.1 算法精度
 
 - 使用更强的 YOLOv5 权重或训练更适合道路场景的数据集。
-- 正式接入 ByteTrack 或 DeepSORT 依赖，减少 ID 切换。
+- 进一步调优真实 DeepSORT 或正式 ByteTrack 的参数，减少 ID 切换。
 - 对车辆遮挡和远处小目标进行专项优化。
 - 根据真实道路数据标定拥堵阈值。
 

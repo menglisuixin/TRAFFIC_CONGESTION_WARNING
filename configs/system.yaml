@@ -19,9 +19,17 @@ model:
     - 7
 
 tracker:
+  # deepsort: use deep_sort_realtime when installed, otherwise IoU fallback.
+  # bytetrack: lightweight ByteTrack-style matching implemented in tracker/bytetrack_tracker.py.
+  # iou: force the simple IoU fallback tracker.
   type: deepsort
+  use_real_deepsort: true
   iou_threshold: 0.3
   max_missing: 30
+  return_missing: false
+  high_conf_threshold: 0.5
+  low_conf_threshold: 0.1
+  low_iou_threshold: 0.2
 
 roi:
   enabled: true

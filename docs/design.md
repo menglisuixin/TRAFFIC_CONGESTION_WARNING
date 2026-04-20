@@ -28,7 +28,7 @@ Detector → Tracker → Analytics → Visualization → ResultWriter
 - `service/`：FastAPI 服务，负责接收上传文件、解析参数、调用 pipeline、返回结果 URL。
 - `core/`：端到端流程控制，包括视频读取、逐帧处理、结果落盘。
 - `detector/`：封装 YOLOv5 推理，输出统一的 `Detection` 数据结构。
-- `tracker/`：封装 DeepSORT / ByteTrack / IoU fallback，输出统一的 `Track` 数据结构。
+- `tracker/`：封装 DeepSORT adapter、ByteTrack-style tracker 和 IoU fallback，输出统一的 `Track` 数据结构。
 - `analytics/`：计算交通流指标和拥堵状态。
 - `calibration/`：提供 Homography 标定和真实距离换算。
 - `visualization/`：绘制检测框、ROI、速度、拥堵状态和统计面板。
@@ -40,7 +40,7 @@ Detector → Tracker → Analytics → Visualization → ResultWriter
 1. `VideoReader` 读取视频帧。
 2. `YOLOv5Detector` 对当前帧进行目标检测。
 3. 检测结果转换为 `Detection`，包括 bbox、类别、置信度。
-4. `DeepSORTTracker` 或 IoU fallback 为目标分配 `track_id`。
+4. 根据配置选择 `deepsort`、`bytetrack` 或 `iou` 跟踪器，为目标分配 `track_id`。
 5. `FrameProcessor` 判断目标是否位于 ROI 内。
 6. ROI 内目标参与速度估计、密度统计、占用率统计和流量计数。
 7. `CongestionDetector` 根据规则输出拥堵等级。

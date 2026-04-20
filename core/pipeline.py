@@ -23,7 +23,9 @@ from core.result_writer import ResultWriter
 from core.types import Point
 from core.video_io import VideoReader, VideoWriter, parse_source
 from detector.yolov5_detector import YOLOv5Detector
+from tracker.bytetrack_tracker import ByteTrackTracker
 from tracker.deepsort_tracker import DeepSORTTracker
+from tracker.base_tracker import BaseTracker
 
 try:
     import yaml
@@ -112,10 +114,7 @@ class TrafficPipeline:
             iou_thres=self.iou_thres,
             classes=config_get(self.config, "model", "classes"),
         )
-        tracker = DeepSORTTracker(
-            iou_threshold=float(tracker_cfg.get("iou_threshold", 0.3)),
-            max_missing=int(tracker_cfg.get("max_missing", 30)),
-        )
+        tracker = create_tracker(tracker_cfg)
         processor = FrameProcessor(
             detector=detector,
             tracker=tracker,
@@ -170,6 +169,9 @@ class TrafficPipeline:
             "every_n": self.every_n,
             "frames_written": len(result_writer.frames),
             "homography_enabled": self.homography is not None,
+            "tracker_type": str(tracker_cfg.get("type", "deepsort")),
+            "tracker_backend": getattr(tracker, "backend_name", tracker.__class__.__name__),
+            "tracker_backend_error": getattr(tracker, "backend_error", None),
             "speed_meters_per_pixel": self.meters_per_pixel,
             "speed_warmup_frames": int(analytics_cfg.get("speed_warmup_frames", 3)),
             "speed_history_size": int(analytics_cfg.get("speed_history_size", 5)),
@@ -205,6 +207,40 @@ class TrafficPipeline:
             y = float(point[1]) * height if normalized else float(point[1])
             parsed.append(Point(x, y))
         return parsed
+
+
+def create_tracker(tracker_cfg: Mapping[str, Any]) -> BaseTracker:
+    tracker_type = str(tracker_cfg.get("type", "deepsort")).strip().lower()
+    iou_threshold = float(tracker_cfg.get("iou_threshold", 0.3))
+    max_missing = int(first_not_none(tracker_cfg.get("max_missing"), tracker_cfg.get("max_age"), 30))
+
+    if tracker_type in {"bytetrack", "byte_track", "byte"}:
+        return ByteTrackTracker(
+            iou_threshold=iou_threshold,
+            low_iou_threshold=float(tracker_cfg.get("low_iou_threshold", 0.2)),
+            high_conf_threshold=float(tracker_cfg.get("high_conf_threshold", 0.5)),
+            low_conf_threshold=float(tracker_cfg.get("low_conf_threshold", 0.1)),
+            max_missing=max_missing,
+            return_missing=bool(tracker_cfg.get("return_missing", False)),
+        )
+
+    if tracker_type in {"iou", "iou_fallback", "fallback"}:
+        return DeepSORTTracker(
+            iou_threshold=iou_threshold,
+            max_missing=max_missing,
+            use_real_deepsort=False,
+            return_missing=bool(tracker_cfg.get("return_missing", False)),
+        )
+
+    if tracker_type in {"deepsort", "deep_sort", "deep-sort"}:
+        return DeepSORTTracker(
+            iou_threshold=iou_threshold,
+            max_missing=max_missing,
+            use_real_deepsort=bool(tracker_cfg.get("use_real_deepsort", True)),
+            return_missing=bool(tracker_cfg.get("return_missing", False)),
+        )
+
+    raise ValueError("tracker.type must be one of: deepsort, bytetrack, iou")
 
 
 def serialize_roi_regions(roi_regions: Optional[Sequence[Mapping[str, object]]]) -> Optional[List[Dict[str, object]]]:
