@@ -112,7 +112,7 @@ class TrafficPipeline:
             img_size=self.img_size,
             conf_thres=self.conf_thres,
             iou_thres=self.iou_thres,
-            classes=config_get(self.config, "model", "classes"),
+            classes=resolve_model_classes(self.config, self.weights),
         )
         tracker = create_tracker(tracker_cfg)
         processor = FrameProcessor(
@@ -166,6 +166,8 @@ class TrafficPipeline:
             "img_size": self.img_size,
             "conf_thres": self.conf_thres,
             "iou_thres": self.iou_thres,
+            "model_names": normalize_model_names(getattr(detector, "names", None)),
+            "model_classes_filter": resolve_model_classes(self.config, self.weights),
             "every_n": self.every_n,
             "frames_written": len(result_writer.frames),
             "homography_enabled": self.homography is not None,
@@ -207,6 +209,69 @@ class TrafficPipeline:
             y = float(point[1]) * height if normalized else float(point[1])
             parsed.append(Point(x, y))
         return parsed
+
+
+def resolve_model_classes(config: Mapping[str, Any], weights: str) -> Optional[List[int]]:
+    model_cfg = config_section(config, "model")
+    classes = model_cfg.get("classes")
+    auto_classes = bool(model_cfg.get("auto_classes", True))
+    if not classes:
+        return None
+    if not auto_classes:
+        return [int(item) for item in classes]
+
+    names = load_weight_class_names(weights)
+    if not names:
+        return [int(item) for item in classes]
+    normalized = {str(name).strip().lower() for name in names.values()}
+    coco_vehicle_names = {"car", "truck"}
+    if coco_vehicle_names.issubset(normalized):
+        return [int(item) for item in classes]
+    custom_motor_ids = [
+        class_id
+        for class_id, name in names.items()
+        if str(name).strip().lower() in {"motor vehicle", "motor_vehicle", "vehicle"}
+    ]
+    if custom_motor_ids:
+        return custom_motor_ids
+    return None
+
+
+def load_weight_class_names(weights: str) -> Dict[int, str]:
+    try:
+        import torch
+    except Exception:
+        return {}
+    yolov5_root = PROJECT_ROOT / "yolov5"
+    if yolov5_root.exists() and str(yolov5_root) not in sys.path:
+        sys.path.insert(0, str(yolov5_root))
+    path = Path(weights)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    if not path.exists():
+        return {}
+    try:
+        checkpoint = torch.load(str(path), map_location="cpu", weights_only=False)
+    except TypeError:
+        try:
+            checkpoint = torch.load(str(path), map_location="cpu")
+        except Exception:
+            return {}
+    except Exception:
+        return {}
+    model = checkpoint.get("model") if isinstance(checkpoint, dict) else None
+    names = getattr(model, "names", None)
+    if names is None and isinstance(checkpoint, dict):
+        names = checkpoint.get("names")
+    return normalize_model_names(names)
+
+
+def normalize_model_names(names: object) -> Dict[int, str]:
+    if isinstance(names, Mapping):
+        return {int(key): str(value) for key, value in names.items()}
+    if isinstance(names, Sequence) and not isinstance(names, (str, bytes)):
+        return {index: str(value) for index, value in enumerate(names)}
+    return {}
 
 
 def create_tracker(tracker_cfg: Mapping[str, Any]) -> BaseTracker:

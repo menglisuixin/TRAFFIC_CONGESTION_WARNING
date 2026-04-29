@@ -48,7 +48,15 @@ class YOLOv5Detector:
         from utils.torch_utils import select_device
 
         requested_device = device
-        if requested_device.startswith("cuda") and not torch.cuda.is_available():
+        normalized_device = str(requested_device).strip().lower()
+        if normalized_device == "cuda":  # YOLOv5 select_device expects '0', '0,1' or 'cpu'
+            requested_device = "0"
+        elif normalized_device.startswith("cuda:"):
+            suffix = normalized_device.split("cuda:", 1)[1].strip()
+            if suffix.isdigit():
+                requested_device = suffix
+
+        if str(requested_device).startswith("cuda") and not torch.cuda.is_available():
             requested_device = "cpu"
 
         self.device = select_device(requested_device)

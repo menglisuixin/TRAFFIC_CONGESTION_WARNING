@@ -231,11 +231,19 @@ def classify_detection(detection: Mapping[str, object]) -> str:
     label = str(detection.get("label", "")).strip().lower()
     class_id = detection.get("class_id")
 
-    if class_id == 0 or label in {"motor vehicle", "car", "bus", "truck", "vehicle"}:
+    if label in {"motor vehicle", "car", "bus", "truck", "vehicle", "van"}:
         return "motor_vehicle"
-    if class_id == 1 or label in {"non_motorized vehicle", "non-motorized vehicle", "bicycle", "motorcycle"}:
+    if label in {"non_motorized vehicle", "non-motorized vehicle", "bicycle", "motorcycle", "bike"}:
         return "non_motor"
-    if class_id == 2 or label in {"pedestrian", "person"}:
+    if label in {"pedestrian", "person"}:
+        return "pedestrian"
+    if label:
+        return "other"
+    if class_id in {2, 5, 7}:
+        return "motor_vehicle"
+    if class_id in {1, 3}:
+        return "non_motor"
+    if class_id == 0:
         return "pedestrian"
     return "other"
 

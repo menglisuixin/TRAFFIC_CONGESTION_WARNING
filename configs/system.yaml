@@ -13,7 +13,9 @@ model:
   img_size: 640
   conf_thres: 0.25
   iou_thres: 0.45
-  # Official YOLOv5 COCO ids: car=2, truck=7. Only these classes are detected.
+  # For official COCO weights, auto_classes keeps only car=2 and truck=7.
+  # For custom traffic weights, auto_classes keeps only Motor Vehicle.
+  auto_classes: true
   classes:
     - 2
     - 7
@@ -34,20 +36,21 @@ tracker:
 roi:
   enabled: true
   # Normalized polygon points in clockwise order. Values are multiplied by frame width/height.
+  # Default ROI uses the full frame. Override via the web UI ROI drawing when needed.
   normalized: true
   points:
-    - [0.15, 0.45]
-    - [0.85, 0.45]
-    - [0.95, 0.95]
-    - [0.05, 0.95]
+    - [0.0, 0.0]
+    - [1.0, 0.0]
+    - [1.0, 1.0]
+    - [0.0, 1.0]
 
 flow_counter:
   enabled: true
   direction: any
   # Default line uses the top edge of the ROI polygon above.
   line:
-    start: [0.15, 0.45]
-    end: [0.85, 0.45]
+    start: [0.0, 0.0]
+    end: [1.0, 0.0]
     normalized: true
 
 analytics:

@@ -1,13 +1,7 @@
 path: ../data
 train: images/train
 val: images/val
-
-nc: 7
+test: images/test
+nc: 1
 names:
   0: Motor Vehicle
-  1: Non_motorized Vehicle
-  2: Pedestrian
-  3: Traffic Light-Red Light
-  4: Traffic Light-Yellow Light
-  5: Traffic Light-Green Light
-  6: Traffic Light-Off

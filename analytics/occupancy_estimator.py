@@ -235,10 +235,14 @@ def classify_detection(detection: Mapping[str, object]) -> str:
         return "non_motor"
     if label in PEDESTRIAN_LABELS:
         return "pedestrian"
-    if class_id in {0, 2, 5, 7}:
+    if label:
+        return "other"
+    if class_id in {2, 5, 7}:
         return "motor"
-    if class_id == 1:
+    if class_id in {1, 3}:
         return "non_motor"
+    if class_id == 0:
+        return "pedestrian"
     return "other"
 
 

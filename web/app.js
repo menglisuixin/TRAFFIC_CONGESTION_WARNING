@@ -47,6 +47,7 @@ const elements = {
   worldLength: document.getElementById("worldLength"),
   undoPointBtn: document.getElementById("undoPointBtn"),
   clearPointsBtn: document.getElementById("clearPointsBtn"),
+  weights: document.getElementById("weights"),
 };
 
 function defaultApiBase() {
@@ -81,9 +82,17 @@ function init() {
   elements.worldLength.addEventListener("input", () => updateCalibrationFromPoints(false));
   elements.form.addEventListener("submit", submitAnalysis);
   elements.resultVideo.addEventListener("error", showMjpegFallback);
+  if (elements.weights) {
+    elements.weights.addEventListener("change", () => {
+      if (!state.summary) {
+        renderTable([], modeFromWeightsSelection());
+      }
+    });
+  }
   updateModeControls();
   checkHealth();
   drawEmptyChart();
+  renderTable([], modeFromWeightsSelection());
 }
 
 async function checkHealth() {
@@ -204,19 +213,41 @@ function renderSummary(summary) {
   const maxFlow = Math.max(0, ...frames.map((item) => safeNumber(item.flow_count, 0)));
   const finalFrame = frames.length ? frames[frames.length - 1] : {};
   const frontendStatus = finalFrame.congestion_status || "CLEAR";
+  const mode = determineModelMode(summary);
 
   elements.frameCount.textContent = String(frames.length || summary.frames_written || 0);
   elements.avgDensity.textContent = avgDensity.toFixed(4);
   elements.avgSpeed.textContent = `${avgSpeed.toFixed(2)} km/h`;
   elements.maxFlow.textContent = String(Math.round(maxFlow));
   elements.finalStatus.textContent = frontendStatus;
-  renderTable(frames);
+  renderTable(frames, mode);
   drawDensityChart(frames);
 }
 
-function renderTable(frames) {
+function modeFromWeightsSelection() {
+  const value = elements.weights ? String(elements.weights.value || "").toLowerCase() : "";
+  if (value.includes("yolov5s.pt") || value.endsWith("yolov5s.pt")) return "coco";
+  return "motor";
+}
+
+function renderTable(frames, mode) {
+  const head = document.getElementById("summaryTableHead");
+  const isCoco = mode === "coco";
+  const countColumns = isCoco ? 2 : 1;
+  const colspan = 2 /* frame + region */ + countColumns + 4 /* density, occupancy, speed, status */;
+  head.innerHTML = `
+    <tr>
+      <th>帧</th>
+      <th>区域</th>
+      ${isCoco ? "<th>car</th><th>truck</th>" : "<th>Motor Vehicle</th>"}
+      <th>Density/100k</th>
+      <th>占用率</th>
+      <th>平均速度</th>
+      <th>状态</th>
+    </tr>
+  `;
   if (!frames.length) {
-    elements.table.innerHTML = `<tr><td colspan="7">summary.json 中没有帧数据</td></tr>`;
+    elements.table.innerHTML = `<tr><td colspan="${colspan}">summary.json 中没有帧数据</td></tr>`;
     return;
   }
   const step = Math.max(1, Math.floor(frames.length / 20));
@@ -232,14 +263,20 @@ function renderTable(frames) {
       mean_speed_kmh: frame.mean_speed_kmh,
       congestion_status: frame.congestion_status,
     }];
+    const detections = Array.isArray(frame.detections) ? frame.detections : [];
     regions.forEach((region) => {
       const density = safeNumber(region.density_per_100k, safeNumber(region.weighted_density, 0) * 100000);
       const status = region.congestion_status || frame.congestion_status || "CLEAR";
+      const counts = countDetectionsByMode(detections, region.name || "ROI", isCoco);
       rows.push(`
         <tr>
           <td>${safeInt(frame.frame_index)}</td>
           <td>${escapeHtml(region.name || "ROI")}</td>
-          <td>${safeInt(region.vehicle_count)}</td>
+          ${
+            isCoco
+              ? `<td>${safeInt(counts.car)}</td><td>${safeInt(counts.truck)}</td>`
+              : `<td>${safeInt(counts.motor)}</td>`
+          }
           <td>${density.toFixed(4)}</td>
           <td>${safeNumber(region.occupancy_ratio).toFixed(4)}</td>
           <td>${safeNumber(region.mean_speed_kmh).toFixed(2)} km/h</td>
@@ -249,6 +286,45 @@ function renderTable(frames) {
     });
   });
   elements.table.innerHTML = rows.join("");
+}
+
+function determineModelMode(summary) {
+  const meta = summary && typeof summary === "object" ? (summary.metadata || summary.meta || {}) : {};
+  const namesObj = (meta && meta.model_names) || summary.model_names || {};
+  const names = Object.values(namesObj || {}).map((v) => String(v || "").trim().toLowerCase());
+  if (names.includes("car") || names.includes("truck")) return "coco";
+  if (names.includes("motor vehicle") || names.includes("motor_vehicle")) return "motor";
+
+  const frames = Array.isArray(summary.frames) ? summary.frames : [];
+  for (const frame of frames.slice(0, 3)) {
+    const dets = Array.isArray(frame.detections) ? frame.detections : [];
+    for (const det of dets) {
+      const label = String(det.label || "").trim().toLowerCase();
+      if (label === "car" || label === "truck") return "coco";
+      if (label === "motor vehicle") return "motor";
+    }
+  }
+  return "motor";
+}
+
+function countDetectionsByMode(detections, regionName, isCoco) {
+  const targetRegion = String(regionName || "ROI");
+  let car = 0;
+  let truck = 0;
+  let motor = 0;
+  for (const det of detections) {
+    const detRegion = String(det.region_name || det.region || "ROI");
+    if (detRegion !== targetRegion) continue;
+    const label = String(det.label || "").trim().toLowerCase();
+    if (isCoco) {
+      if (label === "car") car += 1;
+      else if (label === "truck") truck += 1;
+    } else {
+      // Single-class custom weights (Motor Vehicle) or any non-COCO weights.
+      motor += 1;
+    }
+  }
+  return { car, truck, motor };
 }
 
 function drawDensityChart(frames) {

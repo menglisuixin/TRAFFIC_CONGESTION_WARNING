@@ -113,10 +113,10 @@ class FrameProcessor:
             return
         self._set_roi(
             [
-                Point(frame_width * 0.15, frame_height * 0.45),
-                Point(frame_width * 0.85, frame_height * 0.45),
-                Point(frame_width * 0.95, frame_height * 0.95),
-                Point(frame_width * 0.05, frame_height * 0.95),
+                Point(0.0, 0.0),
+                Point(float(frame_width), 0.0),
+                Point(float(frame_width), float(frame_height)),
+                Point(0.0, float(frame_height)),
             ]
         )
 
@@ -581,12 +581,24 @@ class FrameProcessor:
         speed_count = int(safe_float(speed_stats.get("speed_count")))
         moving_speed_count = int(safe_float(speed_stats.get("moving_speed_count")))
         moving_avg_speed_text = "-- km/h" if moving_speed_count <= 0 else f"{safe_float(speed_stats.get('moving_mean_speed_kmh')):.2f} km/h"
+        density = safe_float(density_stats.get("density"))
+        weighted_density = safe_float(density_stats.get("weighted_density"))
+        density_per_100k = density * 100000.0
+        weighted_density_per_100k = weighted_density * 100000.0
+        normalized_labels = {str(track.label).strip().lower() for track in tracks}
+        uses_coco_car_truck = bool({"car", "truck"} & normalized_labels)
+        car_count = sum(1 for track in tracks if str(track.label).strip().lower() == "car")
+        truck_count = sum(1 for track in tracks if str(track.label).strip().lower() == "truck")
         lines = [
             f"目标总数：{len(tracks):d}",
-            f"ROI内车辆(car/truck)：{int(safe_float(density_stats.get('vehicle_count')))}",
+            (
+                f"ROI内 car：{car_count:d}  truck：{truck_count:d}"
+                if uses_coco_car_truck
+                else f"ROI内机动车：{int(safe_float(density_stats.get('vehicle_count')))}"
+            ),
             f"总流量计数：{int(safe_float(density_stats.get('flow_count')))}",
-            f"道路密度：{safe_float(density_stats.get('density')):.4f}",
-            f"加权密度：{safe_float(density_stats.get('weighted_density')):.4f}",
+            f"道路密度/10万像素：{density_per_100k:.4f}",
+            f"加权密度/10万像素：{weighted_density_per_100k:.4f}",
             f"占用率：{safe_float(density_stats.get('occupancy_ratio')):.4f}",
             f"ROI内测速目标：{speed_count:d}",
             f"平均车速：{moving_avg_speed_text}",
@@ -769,6 +781,8 @@ def classify_track(track: Track) -> str:
         return "non_motor"
     if label in {"pedestrian", "person"}:
         return "pedestrian"
+    if label:
+        return "other"
     if track.cls_id in {2, 5, 7}:
         return "motor_vehicle"
     if track.cls_id in {1, 3}:

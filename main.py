@@ -15,6 +15,7 @@ from core.types import Point, Track
 from detector.yolov5_detector import YOLOv5Detector
 from tracker.deepsort_tracker import DeepSORTTracker
 from visualization.drawer import TrafficDrawer
+from core.pipeline import load_weight_class_names
 
 SourceType = Union[int, str]
 
@@ -29,7 +30,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--img-size", type=int, default=640, help="YOLOv5 inference image size")
     parser.add_argument("--output", default="", help="Optional output video path")
     parser.add_argument("--show", action="store_true", help="Show live visualization window")
-    parser.add_argument("--classes", default="2,7", help="COCO class ids to detect. Default: 2,7 for car,truck")
+    parser.add_argument(
+        "--classes",
+        default="auto",
+        help="Class ids to detect (comma-separated), 'all', or 'auto'. Default: auto.",
+    )
     return parser.parse_args()
 
 
@@ -56,7 +61,7 @@ def main() -> None:
         img_size=args.img_size,
         conf_thres=args.conf_thres,
         iou_thres=args.iou_thres,
-        classes=parse_class_ids(args.classes),
+        classes=resolve_classes_arg(args.weights, args.classes),
     )
     tracker = DeepSORTTracker()
     trajectories = TrajectoryStore(max_length=30, use_bottom_center=True)
@@ -135,6 +140,24 @@ def parse_class_ids(value: str):
         return None
     return [int(item.strip()) for item in text.split(",") if item.strip()]
 
+
+def resolve_classes_arg(weights: str, classes_arg: str):
+    text = str(classes_arg).strip().lower()
+    if text in {"", "all", "none", "null"}:
+        return None
+    if text != "auto":
+        return parse_class_ids(classes_arg)
+
+    names = load_weight_class_names(weights)
+    normalized = {str(name).strip().lower() for name in names.values()}
+    if {"car", "truck"}.issubset(normalized):
+        return [2, 7]
+    if {"motor vehicle", "motor_vehicle", "vehicle"} & normalized:
+        # Custom traffic weights (single-class or multi-class) - keep Motor Vehicle only.
+        motor_ids = [int(i) for i, name in names.items() if str(name).strip().lower() in {"motor vehicle", "motor_vehicle", "vehicle"}]
+        return motor_ids or None
+    return None
+
 def _parse_source(source: str) -> SourceType:
     return int(source) if source.isdigit() else source
 
@@ -160,7 +183,11 @@ def _create_writer(
         return None
 
     path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.suffix.lower() not in {".mp4", ".avi", ".mov", ".mkv"}:
+        path.mkdir(parents=True, exist_ok=True)
+        path = path / "result.mp4"
+    else:
+        path.parent.mkdir(parents=True, exist_ok=True)
     fps = capture.get(cv2.CAP_PROP_FPS)
     if fps <= 0 or np.isnan(fps):
         fps = 25.0
@@ -168,6 +195,7 @@ def _create_writer(
     writer = cv2.VideoWriter(str(path), fourcc, fps, (frame_width, frame_height))
     if not writer.isOpened():
         raise RuntimeError(f"Could not open output video writer: {output_path}")
+    print(f"output_video: {path.resolve()}")
     return writer
 
 

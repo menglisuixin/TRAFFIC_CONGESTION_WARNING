@@ -38,7 +38,7 @@
           <label for="weights">YOLOv5 权重</label>
           <select id="weights" name="weights">
             <option value="yolov5s.pt" selected>官方 yolov5s.pt</option>
-            <option value="outputs/train/yolov5s_mid/weights/best.pt">自训练 best.pt</option>
+            <option value="outputs/train/motor_vehicle_with_demo/weights/best.pt">自训练 best.pt</option>
           </select>
         </div>
 
@@ -190,20 +190,10 @@
       </div>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th>帧</th>
-              <th>区域</th>
-              <th>ROI车辆(car/truck)</th>
-              <th>Density/100k</th>
-              <th>占用率</th>
-              <th>平均速度</th>
-              <th>状态</th>
-            </tr>
-          </thead>
+          <thead id="summaryTableHead"></thead>
           <tbody id="summaryTable">
             <tr>
-              <td colspan="7">暂无数据</td>
+              <td colspan="9">暂无数据</td>
             </tr>
           </tbody>
         </table>
@@ -211,7 +201,7 @@
     </section>
   </main>
 
-  <script src="app.js?v=20260418_roi_flow8"></script>
+  <script src="app.js?v=20260427_table_mode1"></script>
 </body>
 
 </html>
